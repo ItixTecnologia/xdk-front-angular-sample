@@ -1,0 +1,8 @@
+{
+    "sourceFolder": "src",
+    "appFolder": "app",
+    "modelsFolder": "models",
+    "servicesFolder": "services",
+    "storesFolder": "stores",
+    "viewsFolder": "views"
+}

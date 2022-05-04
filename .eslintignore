@@ -1,0 +1,3 @@
+src/**/*.spec.ts
+src/**/*.html
+e2e/**/*.ts
