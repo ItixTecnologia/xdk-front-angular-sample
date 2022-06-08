@@ -1,0 +1,7 @@
+<ix-table-card class="ix-mb-5" [config]="tableConfig">
+    <ng-template ixCustomColumn="situacao" let-value="value">
+        <div class="ix-d-flex ix-px-0 ix-flex-column">
+            <span>{{getDescricaoSituacao(value)}}</span>
+        </div>
+    </ng-template>
+</ix-table-card>

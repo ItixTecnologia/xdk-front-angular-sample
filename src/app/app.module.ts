@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IxCoreConfig, IxCoreModule } from '@itix/core';
+import { IxComponentsConfig, IxComponentsModule } from '@itix/components';
 
 import { AppRoutingModule, routes } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ const xdkConfig: IxCoreConfig = {
         loginSyncRoute: 'login'
     }
 };
+const xdkCompConfig: IxComponentsConfig = {};
 
 @NgModule({
     imports: [
@@ -28,6 +30,7 @@ const xdkConfig: IxCoreConfig = {
         HttpClientModule,
         AppRoutingModule,
         IxCoreModule.forRoot(xdkConfig),
+        IxComponentsModule.forRoot(xdkCompConfig),
         ComponentsModule,
         ViewsModule
     ],

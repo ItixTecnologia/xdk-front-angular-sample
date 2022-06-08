@@ -1,19 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LayoutsModule } from '@itix/components';
+import { LayoutsModule, ColumnModule } from '@itix/components';
 
 import { HomeComponent } from './home/home.component';
+import { GerenciamentoPacientesComponent } from './gerenciamento-pacientes/gerenciamento-pacientes.component';
 
 @NgModule({
     imports: [
         CommonModule,
-        LayoutsModule
+        LayoutsModule,
+        ColumnModule
     ],
     declarations: [
-        HomeComponent
+        HomeComponent,
+        GerenciamentoPacientesComponent
     ],
     exports: [
-        HomeComponent
+        HomeComponent,
+        GerenciamentoPacientesComponent
     ]
 })
-export class ViewsModule { }
+export class ViewsModule {}

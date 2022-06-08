@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { DefaultLayoutComponent } from '@itix/components';
 
 import { HomeComponent } from './views/home/home.component';
+import { GerenciamentoPacientesComponent } from './views/gerenciamento-pacientes/gerenciamento-pacientes.component';
 
 export const routes: Routes = [
     { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -37,12 +38,12 @@ export const routes: Routes = [
                 },
                 children: [
                     {
-                        path: 'home2',
-                        component: HomeComponent,
+                        path: 'pacientes',
+                        component: GerenciamentoPacientesComponent,
                         data: {
                             showInMenu: true,
-                            title: 'Página Inicial',
-                            icon: 'fad fa-file'
+                            title: 'Gerenciamento de pacientes',
+                            icon: 'fad fa-user-injured'
                         }
                     }
                     /**
