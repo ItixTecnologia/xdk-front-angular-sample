@@ -20,4 +20,4 @@ import { GerenciamentoPacientesComponent } from './gerenciamento-pacientes/geren
         GerenciamentoPacientesComponent
     ]
 })
-export class ViewsModule {}
+export class ViewsModule { }

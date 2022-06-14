@@ -1,4 +1,4 @@
 export const environment = {
     production: false,
-    baseUrl: 'https://localhost:17639'
+    baseUrl: 'https://demo2723702.mockable.io'
 };
