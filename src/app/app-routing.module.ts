@@ -4,15 +4,11 @@ import { DefaultLayoutComponent } from '@itix/components';
 
 import { HomeComponent } from './views/home/home.component';
 import { GerenciamentoPacientesComponent } from './views/gerenciamento-pacientes/gerenciamento-pacientes.component';
+import { PacientesFormComponent } from './views/gerenciamento-pacientes/form/pacientes-form.component';
 
 export const routes: Routes = [
     { path: '', pathMatch: 'full', redirectTo: 'home' },
 
-    /**
-     * Adicionar aqui as rotas.
-     * ATENÇÃO: AQUI APENAS COMO EXEMPLO, UTILIZAR A SUA PRÓPRIA ESTRUTURA E REMOVER O LIXO.
-     * Exemplos:
-     **/
     {
         path: '',
         component: DefaultLayoutComponent,
@@ -39,27 +35,16 @@ export const routes: Routes = [
                 children: [
                     {
                         path: 'pacientes',
-                        component: GerenciamentoPacientesComponent,
-                        data: {
-                            showInMenu: true,
-                            title: 'Gerenciamento de pacientes',
-                            icon: 'fad fa-user-injured'
-                        }
-                    }
-                    /**
-                     * Exemplo de CRUD:
-                     {
-                        path: 'products',
                         data: {
                             isGroup: true,
-                            title: 'Produtos',
-                            breadcrumb: 'Produtos',
-                            icon: 'fad fa-fill-drip'
+                            title: 'Gerenciamento de pacientes',
+                            breadcrumb: 'Gerenciamento de pacientes',
+                            icon: 'fad fa-user-injured'
                         },
                         children: [
                             {
                                 path: '',
-                                component: ProductsComponent,
+                                component: GerenciamentoPacientesComponent,
                                 data: {
                                     showInMenu: true,
                                     title: 'Lista'
@@ -67,18 +52,17 @@ export const routes: Routes = [
                             },
                             {
                                 path: 'add',
-                                component: ProductFormComponent,
+                                component: PacientesFormComponent,
                                 data: {
                                     showInMenu: true,
                                     title: 'Novo',
                                     breadcrumb: 'Novo'
                                 }
                             },
-                            { path: ':id', component: ProductFormComponent, data: { breadcrumb: 'Visualizar' } },
-                            { path: ':id/edit', component: ProductFormComponent, data: { breadcrumb: 'Editar' } }
+                            { path: ':id', component: PacientesFormComponent, data: { breadcrumb: 'Visualizar' } },
+                            { path: ':id/edit', component: PacientesFormComponent, data: { breadcrumb: 'Editar' } }
                         ]
                     }
-                     */
                 ]
             }
         ]
@@ -91,5 +75,5 @@ export const routes: Routes = [
     imports: [RouterModule.forRoot(routes, { useHash: true })],
     exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
 
